@@ -68,17 +68,18 @@ def run_analysis():
     )
 
     if bullish_trend and buy_cross:
-        signal = "ACHAT (BUY)"
+        signal = "🟢 ACHAT (BUY) 🚀"
     elif bearish_trend and sell_cross:
-        signal = "VENTE (SELL)"
+        signal = "🔴 VENTE (SELL) 📉"
     else:
-        signal = "NEUTRE (AUCUN SIGNAL)"
+        signal = "⚪ NEUTRE (AUCUN SIGNAL) ⏳"
 
     message = (
-        f"Analyse Or ({ticker}) - {candle_time}\n"
-        f"Prix : {entry_price:.2f}\n"
-        f"ATR (14) : {atr_val:.2f}\n"
-        f"Signal : {signal}"
+        f"📊 Analyse Or ({ticker}) 🪙\n"
+        f"🕒 Date : {candle_time}\n"
+        f"💰 Prix : {entry_price:.2f}\n"
+        f"📏 ATR (14) : {atr_val:.2f}\n"
+        f"📢 Signal : {signal}"
     )
 
     print(message)
